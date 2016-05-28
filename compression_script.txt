@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<fstream.h>
+void main(){
+ ofstream f1("boss_file",ios::app);  //boss_file is the final compressed file
+   ifstream f2;
+   char filename[10],string[15];
+   for(int i=0;i<=100;i++)
+   { sprintf(filename,"file%d",i);
+     f2.open(filename,ios::in);
+     cin.get(string,16);
+     f1<<string;
+     }
+f1.close();
+f2.close();
+getch();
+}
